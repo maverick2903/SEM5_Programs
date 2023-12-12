@@ -1,7 +1,7 @@
 
 from collections import deque
 
-def dfs(graph, start, visited=None):
+def dfs(graph, start, visited):
     if visited is None:
         visited = set()
     visited.add(start)
@@ -50,4 +50,4 @@ bfs(graph, 'A')
 print("\nDFID traversal:")
 dfid(graph, 'A', 2)
 print("\nDFS traversal:")
-dfs(graph, 'A')
+dfs(graph, 'A',None)
