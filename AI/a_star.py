@@ -55,11 +55,10 @@ class Graph:
                 else: # Check if it's quicker to visit n than m
                     if distance[m] > distance[n] + weight:
                         distance[m] = distance[n] + weight
-                        adjacent_nodes[m] = n
-            
-            if m in closed_list:
-                closed_list.remove(m)
-                open_list.add(m)
+                        adjacent_nodes[m] = n          
+                        if m in closed_list:
+                            closed_list.remove(m)
+                            open_list.add(m)
             
             open_list.remove(n) # Since all neighbors are inspected
             closed_list.add(n)
